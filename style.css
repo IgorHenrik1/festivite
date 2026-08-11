@@ -67,6 +67,28 @@ main {
   border-radius: 12px;
 }
 
+.text-hero {
+  margin: 32px;
+}
+
+.text-hero img {
+  width: 45.85px;
+  height: 48px;
+}
+
+.text-hero div h1 {
+  font-family: "Leckerli One", cursive;
+  font-size: 40px;
+  color: var(--pink);
+}
+
+.text-hero div p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  font-size: 1rem;
+  color: var(--text-heading);
+}
+
 #invitation-form {
   background-color: var(--shape-body);
   width: 820px;
