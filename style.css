@@ -94,3 +94,110 @@ main {
   width: 820px;
   border-radius: 12px;
 }
+
+#invitation-form .container {
+  padding: 80px 130px;
+}
+
+#invitation-form .container h2 {
+  font-family: "Baloo 2", cursive;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text-heading);
+  margin-bottom: 40px;
+}
+
+#invitation-form .container .title-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+#invitation-form .container .title-form .lucide-calendar {
+  color: var(--input-placeholder);
+}
+
+#invitation-form .container .title-form p {
+  font-family: "Baloo 2", cursive;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  color: var(--text-heading);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--text-body);
+}
+
+.form-group input,
+textarea {
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: 8px;
+  padding: 13px 16px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--input-placeholder);
+}
+
+.form-center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px;
+  margin: 16px 0px;
+}
+
+.options {
+  display: flex;
+  gap: 4px;
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: 8px;
+  padding: 4px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--input-placeholder);
+}
+
+.options input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0px 10.5px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 129px;
+}
+
+.options label:hover {
+  background: var(--shape-button);
+}
+
+.options input[type="radio"]:checked + label {
+  background: var(--shape-button);
+  color: var(--text-heading);
+}
+
+input[type="radio"]:checked + label svg {
+  color: var(--brand-light);
+}
