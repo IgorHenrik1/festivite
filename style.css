@@ -93,6 +93,7 @@ main {
   background-color: var(--shape-body);
   width: 820px;
   border-radius: 12px;
+  overflow-y: scroll;
 }
 
 #invitation-form .container {
@@ -113,7 +114,7 @@ main {
   margin-bottom: 24px;
 }
 
-#invitation-form .container .title-form .lucide-calendar {
+#invitation-form .container .title-form svg {
   color: var(--input-placeholder);
 }
 
@@ -200,4 +201,78 @@ textarea {
 
 input[type="radio"]:checked + label svg {
   color: var(--brand-light);
+}
+
+textarea {
+  margin-bottom: 48px;
+}
+
+.colors {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.colors input {
+  position: absolute;
+  opacity: 0;
+}
+
+.colors label {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  display: block;
+
+  position: relative;
+
+  /* círculo escuro ao redor */
+  box-shadow: 0 0 0 10px var(--shape-button);
+}
+
+/* Cores */
+.color-purple {
+  background: var(--purple);
+}
+
+.color-fuchsia {
+  background: var(--fuchsia);
+}
+
+.color-pink {
+  background: var(--pink);
+}
+
+.color-orange {
+  background: var(--orange);
+}
+
+.color-yellow {
+  background: var(--yellow);
+}
+
+.color-lime {
+  background: var(--lime);
+}
+
+.color-green {
+  background: var(--green);
+}
+
+.color-cyan {
+  background: var(--cyan);
+}
+
+.color-navy {
+  background: var(--navy);
+}
+
+/* Estado selecionado */
+.colors input:checked + label {
+  outline: 2px solid #58aaf0;
+  outline-offset: 7px;
 }
