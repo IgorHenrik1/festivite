@@ -337,9 +337,28 @@ textarea {
   border-color: var(--brand-light);
 }
 
-.styles {
-  margin: 28px 0 48px 0;
+/* ========================================
+   ESTILO E FOTO DE CAPA
+======================================== */
+
+.style-cover {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+
+  margin: 28px 0 48px;
 }
+
+.styles,
+.cover-photo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ========================================
+   SWITCH
+======================================== */
 
 .theme-switch {
   display: flex;
@@ -348,17 +367,22 @@ textarea {
 }
 
 .theme-switch p {
-  font-family: "Open Sans";
+  margin: 0;
+
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   color: #fff;
 }
 
-/* Container do switch */
 .switch {
   position: relative;
+
+  display: inline-block;
+
   width: 64px;
   height: 32px;
-  display: inline-block;
+
+  flex-shrink: 0;
 }
 
 /* Esconde o checkbox padrão */
@@ -372,11 +396,13 @@ textarea {
 .slider {
   position: absolute;
   inset: 0;
-  cursor: pointer;
 
   background-color: transparent;
+
   border: 2px solid var(--input-stroke);
   border-radius: 50px;
+
+  cursor: pointer;
 
   transition: 0.3s;
 }
@@ -386,19 +412,84 @@ textarea {
   content: "";
 
   position: absolute;
+
   width: 24px;
   height: 24px;
 
-  left: 4px;
   top: 2px;
+  left: 2px;
 
   background-color: var(--input-stroke);
+
   border-radius: 50%;
 
   transition: 0.3s;
 }
 
-/* Quando estiver ativado */
+/* Switch ativado */
 .switch input:checked + .slider::before {
-  transform: translateX(28px);
+  transform: translateX(32px);
+}
+
+/* ========================================
+   FILE UPLOAD
+======================================== */
+
+.file-upload {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Esconde o input padrão */
+.file-upload input[type="file"] {
+  display: none;
+}
+
+/* Botão selecionar */
+.file-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: fit-content;
+
+  padding: 10.5px 12px;
+
+  background-color: var(--shape-button);
+  color: #fff;
+
+  border-radius: 8px;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px !important;
+  font-weight: bolder !important;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.file-button:hover {
+  background-color: #363b41;
+}
+
+/* Ícone upload */
+.file-button svg {
+  color: #59b2ff;
+  flex-shrink: 0;
+}
+
+/* Nome do arquivo */
+.file-name {
+  overflow: hidden;
+
+  color: #9299a0;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
