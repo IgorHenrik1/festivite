@@ -47,6 +47,8 @@
 
 body {
   background-color: var(--shape-body);
+  margin: auto;
+  overflow: hidden;
 }
 
 main {
@@ -333,4 +335,70 @@ textarea {
 /* Hover não sobrescreve o selecionado */
 .event-type input:checked + label:hover {
   border-color: var(--brand-light);
+}
+
+.styles {
+  margin: 28px 0 48px 0;
+}
+
+.theme-switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-switch p {
+  font-family: "Open Sans";
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Container do switch */
+.switch {
+  position: relative;
+  width: 64px;
+  height: 32px;
+  display: inline-block;
+}
+
+/* Esconde o checkbox padrão */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Fundo do switch */
+.slider {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+
+  background-color: transparent;
+  border: 2px solid var(--input-stroke);
+  border-radius: 50px;
+
+  transition: 0.3s;
+}
+
+/* Bolinha */
+.slider::before {
+  content: "";
+
+  position: absolute;
+  width: 24px;
+  height: 24px;
+
+  left: 4px;
+  top: 2px;
+
+  background-color: var(--input-stroke);
+  border-radius: 50%;
+
+  transition: 0.3s;
+}
+
+/* Quando estiver ativado */
+.switch input:checked + .slider::before {
+  transform: translateX(28px);
 }
