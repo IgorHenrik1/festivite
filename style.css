@@ -212,6 +212,7 @@ textarea {
   gap: 30px;
   align-items: center;
   margin-top: 16px;
+  margin-bottom: 28px;
 }
 
 .colors input {
@@ -273,6 +274,63 @@ textarea {
 
 /* Estado selecionado */
 .colors input:checked + label {
-  outline: 2px solid #58aaf0;
+  outline: 2px solid var(--brand-light);
   outline-offset: 7px;
+}
+
+.event-types {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.event-type input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.event-type label {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  background: #292d31;
+  border: 2px solid transparent;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+  border-color: var(--input-stroke);
+
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.event-type img {
+  width: 130px;
+  height: 64px;
+  margin: 4px 4px 0 4px;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+.event-type span {
+  padding: 8px;
+  text-align: center;
+
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Selecionado */
+.event-type input:checked + label {
+  border-color: var(--brand-light);
+}
+
+/* Hover não sobrescreve o selecionado */
+.event-type input:checked + label:hover {
+  border-color: var(--brand-light);
 }
