@@ -494,3 +494,150 @@ textarea {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.form-email-phone {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 16px 0px;
+}
+
+.terms-section {
+  width: 100%;
+  margin-top: 48px;
+}
+
+.terms-section hr {
+  border: none;
+  border-top: 1px solid #2f353a;
+
+  margin-bottom: 40px;
+}
+
+/* CHECKBOX ITEM */
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 8.5px;
+
+  color: #c8cdd2;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+
+  cursor: pointer;
+}
+
+/* Esconde o checkbox padrão */
+
+.checkbox-item input {
+  display: none;
+}
+
+/* Checkbox personalizado */
+
+.custom-checkbox {
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+
+  flex-shrink: 0;
+
+  border: 1px solid #3b4248;
+  border-radius: 5px;
+
+  background-color: transparent;
+
+  transition: 0.2s;
+}
+
+/* Checkbox marcado */
+
+.checkbox-item input:checked + .custom-checkbox {
+  border-color: #59b2ff;
+}
+
+/* Check */
+
+.checkbox-item input:checked + .custom-checkbox::after {
+  content: "";
+
+  position: absolute;
+
+  left: 6px;
+  top: 1px;
+
+  width: 5px;
+  height: 10px;
+
+  border: solid #59b2ff;
+  border-width: 0 2px 2px 0;
+
+  transform: rotate(45deg);
+}
+
+/* Links */
+
+.checkbox-item a {
+  color: #59b2ff;
+
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.checkbox-item a:hover {
+  color: #7cc3ff;
+}
+
+/* BOTÃO */
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 48px;
+}
+
+.invite-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 16px 24px;
+
+  min-width: 202px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: var(--brand-dark);
+  color: #ffffff;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+.invite-button:hover {
+  background-color: #3189cc;
+}
+
+.invite-button:active {
+  transform: scale(0.98);
+}
+
+.invite-button svg {
+  flex-shrink: 0;
+}
