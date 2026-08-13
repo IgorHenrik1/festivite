@@ -112,6 +112,7 @@ main {
 
 #invitation-form .container .title-form {
   display: flex;
+  align-items: center;
   gap: 12px;
   margin-bottom: 24px;
 }
